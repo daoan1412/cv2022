@@ -5,25 +5,37 @@ import styles from '../styles/Home.module.css'
 import Content from '../components/Content/Content'
 
 const Home: NextPage = () => {
+  const isProd = process.env.NODE_ENV === 'production'
+
   return (
     <div>
       <Head>
         <title>Dao An CV</title>
-        <link rel="icon" href="/favicon.ico" />
+        {
+          isProd ?
+            <link rel="icon" href="https://daoan1412.github.io/cv2022/favicon.ico" /> :
+            <link rel="icon" href="/favicon.ico" />
+        }
+
       </Head>
       <div className="bg-blue-600 text-white">
         <div className="container mx-auto sm:py-10 py-6 flex sm:flex-row flex-col justify-around sm:space-y-0 space-y-3">
-          <img className="rounded-full sm:w-24 w-20 self-center" src="/av1.jpg"></img>
+          {
+            isProd ?
+              <img className="rounded-full sm:w-24 w-20 self-center" src="https://daoan1412.github.io/cv2022/av1.jpg"></img> :
+              <img className="rounded-full sm:w-24 w-20 self-center" src="/av1.jpg"></img>
+          }
+
           <div className="self-center">
             <div className="font-semibold text-2xl">
               Dao An
-          </div>
+            </div>
             <div className="font-medium">
               Mobile Developer
-          </div>
+            </div>
             <div className="font-medium">
               Ha Noi, Viet Nam
-          </div>
+            </div>
           </div>
           <div className="self-center space-y-1 text-sm flex flex-col">
             <a target="_blank" rel="noreferrer" href="mailto:daoan1412@gmail.com"><i className="fas fa-envelope"></i>&nbsp;	 daoan1412@gmail.com</a>
@@ -76,33 +88,33 @@ const Home: NextPage = () => {
       >
         <div>
           Flutter - good
-            </div>
+        </div>
         <div>
           Android - good
-          </div>
+        </div>
         <div>
           iOS - good
-          </div>
+        </div>
         <div>
           Rust - good
-          </div>
+        </div>
         <div>
           Git - good
-          </div>
+        </div>
         <div>
           .NET (back end) - good
-            </div>
+        </div>
         <div>
           React Native, ReactJS, NextJS - intermediate
-            </div>
+        </div>
         <div>
           English - intermediate
-         </div>
+        </div>
         <div className="mt-4">
           NodeJS (Auth, RESTful API, SocketIO, GraphQL)<br></br>
-            Firebase (Authentication, Database, Functions, Storage, Hosting, Cloud Messaging) <br></br>
-            Database (Realm, Couchbase, PostgreSQL) <br></br>
-            DevOps: linux, nginx, docker, bashscript, python ... <br></br>
+          Firebase (Authentication, Database, Functions, Storage, Hosting, Cloud Messaging) <br></br>
+          Database (Realm, Couchbase, PostgreSQL) <br></br>
+          DevOps: linux, nginx, docker, bashscript, python ... <br></br>
         </div>
       </Content>
 
@@ -124,7 +136,7 @@ const Home: NextPage = () => {
           </span>
           <span>
             &nbsp; (contribution rate 100%) The app manages employee information, photo data of facial angles for CIVAMS Face timekeeping system
-          </span> &nbsp; 
+          </span> &nbsp;
           <a target="_blank" rel="noreferrer" className="underline mt-4" href="https://youtu.be/9P2tSm4tupY">(Video demo)</a>
         </div>
         <div className="mt-4">
@@ -133,7 +145,7 @@ const Home: NextPage = () => {
           </span>
           <span>
             &nbsp; (contribution rate 90%) The mobile SDK for reading and validating citizen identity information CMC CCCD SDK
-          </span> &nbsp; 
+          </span> &nbsp;
           <a target="_blank" rel="noreferrer" className="underline mt-4" href="https://drive.google.com/file/d/1xzCaN6eX1xe2ihkV1n2jcAwxPmSPUDDG/view?usp=sharing">(Video demo)</a>
         </div>
         <div className="mt-4">
@@ -142,7 +154,7 @@ const Home: NextPage = () => {
           </span>
           <span>
             &nbsp; (contribution rate 100%) The app for generates a 2-Step Verification code on your phone.
-          </span> &nbsp; 
+          </span> &nbsp;
         </div>
         <div className="mt-4">
           <span className="font-semibold">
@@ -150,7 +162,7 @@ const Home: NextPage = () => {
           </span>
           <span>
             &nbsp; (contribution rate 100%) A website that connects users with chatbots and agents.
-          </span> &nbsp; 
+          </span> &nbsp;
         </div>
         <div className="mt-4">
           <span className="font-semibold">
@@ -158,7 +170,7 @@ const Home: NextPage = () => {
           </span>
           <span>
             &nbsp; (contribution rate 100%) The app for access control, online and offline facial recognition combined with time attendance.
-          </span> &nbsp; 
+          </span> &nbsp;
         </div>
       </Content>
 
@@ -176,10 +188,10 @@ const Home: NextPage = () => {
       >
         <div className="font-semibold">
           Hanoi University of Pharmacy
-          </div>
+        </div>
         <div className="font-light italic">
           2012 - 2017
-          </div>
+        </div>
         <div className="mt-4 font-light">Good graduation</div>
       </Content>
       <div className="pt-8"></div>
