@@ -7,7 +7,7 @@ const nextConfig = {
   reactStrictMode: true,
   optimizeFonts: false,
   swcMinify: false,
-  assetPrefix: isProd ? 'https://raw.githubusercontent.com/daoan1412/cv2022/main/docs' : '',
+  assetPrefix: isProd ? 'https://rawgit.com/daoan1412/cv2022/main/docs' : '',
 }
 
 module.exports = nextConfig
